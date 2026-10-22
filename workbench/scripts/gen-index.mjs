@@ -71,7 +71,8 @@ const walkDemos = (dir) => {
     if (MATERIAL_REQUIRED.has(stem)) continue;
     const src = readFileSync(p, "utf8");
     if (!new RegExp(`export const ${stem}\\s*:\\s*React\\.FC\\s*=`).test(src)) continue;
-    const rel = relative(demosDir, p).replace(/\.tsx$/, "");
+    // const rel = relative(demosDir, p).replace(/\.tsx$/, "");
+    const rel = relative(demosDir, p).replaceAll("\\", "/").replace(/\.tsx$/, "");
     const [category, slug] = rel.split("/");
     const m = DUR_PAT.exec(src);
     let durExport = m?.[1];
