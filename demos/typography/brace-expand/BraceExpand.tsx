@@ -104,7 +104,7 @@ export const BraceExpand: React.FC = () => {
           position: 'absolute', left: 0, right: 0, top: CY - 248, textAlign: 'center', color: L.accent2,
           ...type(32, 500, { mono: true }), letterSpacing: `${mix(0.5, 0.08, ramp(frame, 44, 20, EASE.snappy)).toFixed(3)}em`,
           opacity: ramp(frame, 44, 14, EASE.out),
-        }}>// shot recipes for your agent</div>
+        }}>/副标题副标题不反弹</div>
 
         {/* 标题：clip 宽度绑括号间距（幕布感，不是淡入/打字） */}
         {on && (
